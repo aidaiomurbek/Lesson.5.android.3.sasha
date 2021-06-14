@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/filmFragment">
+
+    <fragment
+        android:id="@+id/filmFragment"
+        android:name="com.example.lesson5android3sasha.ui.film.FilmFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_film">
+        <action
+            android:id="@+id/action_mainFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+        <action
+            android:id="@+id/action_filmFragment_to_savedFragment"
+            app:destination="@id/savedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionFragment"
+        android:name="com.example.lesson5android3sasha.ui.DescriptionFragment"
+        android:label="fragment_description"
+        tools:layout="@layout/fragment_description" />
+
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.lesson5android3sasha.ui.saved.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_savedFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+    </fragment>
+</navigation>
